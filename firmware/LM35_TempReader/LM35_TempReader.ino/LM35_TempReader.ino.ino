@@ -12,4 +12,4 @@ void loop() {
   Serial.println(tempC[2]);
   delay(1000);
 }
-// DONG NAY DE TEST CONFLICT
+// SINH VIEN A DA CHIEM CHO NAY !!!
