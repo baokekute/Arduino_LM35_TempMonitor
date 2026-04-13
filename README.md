@@ -53,6 +53,8 @@ Dự án mạng cảm biến sử dụng vi điều khiển Arduino để đọc
 \## Thành viên nhóm
 
 \- Dương Quốc (Chủ repo)
+## Tác giả
+* **Dương Quốc** - [Xem trang cá nhân (Portfolio)](https://baokekute.github.io)
 
 \- \[Nguyễn Thanh Phú] (Collaborator)
 
