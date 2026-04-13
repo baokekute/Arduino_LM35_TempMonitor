@@ -1,22 +1,23 @@
-const int sensorPin = A0; // Chân analog A0 nối với LM35
+const int sensorPins[2] = {A0, A1}; // 2 kênh cảm biến
 
 void setup() {
-  // Khởi tạo giao tiếp Serial ở tốc độ 9600 baud
   Serial.begin(9600);
 }
 
 void loop() {
-  // Đọc giá trị ADC từ cảm biến (0 - 1023)
-  int adcValue = analogRead(sensorPin);
-  
-  // Chuyển đổi giá trị ADC sang nhiệt độ (độ C)
-  float tempC = (adcValue * 500.0) / 1023.0;
-  
-  // In kết quả ra màn hình Serial Monitor
-  Serial.print("Nhiet do LM35: ");
-  Serial.print(tempC);
-  Serial.println(" C");
-  
-  // Đợi 1 giây trước khi đọc lần tiếp theo
+  int adcValues[2];
+  float tempC[2];
+
+  // Vòng lặp đọc 2 kênh
+  for(int i=0; i<2; i++) {
+    adcValues[i] = analogRead(sensorPins[i]);
+    tempC[i] = (adcValues[i] * 500.0) / 1023.0;
+  }
+
+  // Gửi dữ liệu định dạng CSV: Temp1,Temp2
+  Serial.print(tempC[0]);
+  Serial.print(",");
+  Serial.println(tempC[1]);
+
   delay(1000);
 }
