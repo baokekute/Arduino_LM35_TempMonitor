@@ -26,4 +26,4 @@ Dự án mạng cảm biến sử dụng vi điều khiển Arduino để đọc
 
 ## Thành viên nhóm
 - Dương Quốc (Chủ repo)
-- [Tên bạn của bạn] (Collaborator)
+- [Hữu Tài] (Collaborator)
