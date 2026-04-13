@@ -1,25 +1,25 @@
-const int sensorPins[3] = {A0, A1, A2}; // Khai báo 3 kênh cảm biến
+const int sensorPins[2] = {A0, A1}; // Vẫn giữ nguyên 2 kênh ban đầu
 
 void setup() {
   Serial.begin(9600);
 }
 
 void loop() {
-  int adcValues[3];
-  float tempC[3];
+  int adcValues[2];
+  float tempC[2];
 
-  // Vòng lặp đọc 3 kênh
-  for(int i=0; i<3; i++) {
+  // Vòng lặp đọc 2 kênh
+  for(int i=0; i<2; i++) {
     adcValues[i] = analogRead(sensorPins[i]);
     tempC[i] = (adcValues[i] * 500.0) / 1023.0;
   }
 
-  // In ra Serial dạng CSV (cách nhau bằng dấu phẩy)
+  // In ra Serial dạng chuỗi JSON chuẩn
+  Serial.print("{\"temp1\": ");
   Serial.print(tempC[0]);
-  Serial.print(",");
+  Serial.print(", \"temp2\": ");
   Serial.print(tempC[1]);
-  Serial.print(",");
-  Serial.println(tempC[2]);
+  Serial.println("}");
 
   delay(1000);
 }
