@@ -54,5 +54,5 @@ Dự án mạng cảm biến sử dụng vi điều khiển Arduino để đọc
 
 \- Dương Quốc (Chủ repo)
 
-\- \[Phạm Hữu Tài] (Collaborator)
+\- \[Nguyễn Thanh Phú] (Collaborator)
 
