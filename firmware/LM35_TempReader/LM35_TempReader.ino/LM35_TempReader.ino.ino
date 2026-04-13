@@ -12,3 +12,4 @@ void loop() {
   Serial.println(tempC[2]);
   delay(1000);
 }
+// KHONG, SINH VIEN B MOI LA NGUOI CHIEM CHO NAY !!!
