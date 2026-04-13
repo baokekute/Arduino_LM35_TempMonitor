@@ -12,3 +12,4 @@ void loop() {
   Serial.println(tempC[2]);
   delay(1000);
 }
+// DONG NAY DE TEST CONFLICT
